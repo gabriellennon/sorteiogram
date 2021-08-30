@@ -35,6 +35,38 @@ body, input, button, textarea{
 
         form{
             width: 100%;
+
+            .results-number{
+                margin: 0 4px;
+            }
+
+            .result{
+                background: #FEF3CD;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                border-radius: 4px;
+                margin-bottom: 15px;
+        
+                p{
+                    color: #856404 !important;
+                    font: 18px 'Roboto', sans-serif;
+        
+                    span{
+                        font: 700 20px 'Roboto', sans-serif;
+                        margin: 0 5px;
+                    }
+                }
+            }
+
+            .section-buttons{
+                display: flex;
+                justify-content: space-between;
+
+                button{
+                    width: auto;
+                }
+            }
         }
 
         img{

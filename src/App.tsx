@@ -4,10 +4,12 @@ import { Nomes } from './pages/Nomes';
 import { AmigoSecreto } from './pages/AmigoSecreto';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { SorteioNumeros } from './pages/SorteioNumeros';
+import { NavBar } from './components/navBar';
 
 function App() {
   return (
     <BrowserRouter>
+      <NavBar />
       <Switch>
         <Route 
           path="/"
