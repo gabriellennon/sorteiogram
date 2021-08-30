@@ -1,10 +1,10 @@
 import React from 'react';
 import { Home } from './pages/Home';
 import { Nomes } from './pages/Nomes';
-import { AmigoSecreto } from './pages/AmigoSecreto';
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { SorteioNumeros } from './pages/SorteioNumeros';
 import { NavBar } from './components/navBar';
+
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -23,10 +23,6 @@ function App() {
         <Route 
           path="/sorteio/nomes"
           component={Nomes}
-        />
-        <Route 
-          path="/sorteio/amigo-secreto"
-          component={AmigoSecreto}
         />
       </Switch>
     </BrowserRouter>

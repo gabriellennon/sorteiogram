@@ -9,11 +9,11 @@ export function Nomes() {
     const [valueNumber, setValueNumber] = useState('1');
     const [newNameFilter, setNameFilter] = useState<string[]>([]);
 
-    function handleBack(){
+    function handleBack() {
         history.push('/')
     }
 
-    function handleSortName(event: FormEvent){
+    function handleSortName(event: FormEvent) {
         event.preventDefault();
         const namesFormatted = namesText.split("\n")
 
@@ -31,7 +31,7 @@ export function Nomes() {
             const element = namesFormatted[i];
             newNameFilterAr.push(element)
         }
-        
+
         setNameFilter(newNameFilterAr);
         console.log(newNameFilterAr)
     }
@@ -52,14 +52,21 @@ export function Nomes() {
                             <textarea placeholder="Digite os nomes" onChange={event => setNameText(event.target.value)} />
                         </div>
                     </div>
+                    {
+                        newNameFilter.length > 0 &&
+                        <div className="result">
+                            <p>
+                                Resultado:
+                                {newNameFilter.map((e) => <span className="results-number">{e}</span>)}
+                                🥳
+                            </p>
+                        </div>
+                    }
+
                     <div className="container-buttons">
                         <button type="submit">Sortear</button>
                         <button onClick={handleBack}>Voltar</button>
                     </div>
-
-                    {/* {
-                        newNameFilterAr.map()
-                    } */}
                 </form>
             </div>
         </div>

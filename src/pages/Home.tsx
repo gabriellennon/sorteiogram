@@ -86,12 +86,6 @@ export function Home() {
                     textButton="criar sorteio de nomes"
                     linkButton="/sorteio/nomes"
                 />
-                <CardSorteio
-                    title="Sortear amigo secreto"
-                    description="Crie o sorteio de amigo secreto simplificado com essa ferramenta que não exige cadastro. O resultado será enviado para todos os participantes."
-                    textButton="criar amigo secreto"
-                    linkButton="/sorteio/amigo-secreto"
-                />
             </div>
         </div>
     )
