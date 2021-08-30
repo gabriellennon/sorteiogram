@@ -2,11 +2,12 @@ import { FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../styles/boxCard.scss';
 
+
 export function Nomes() {
     const history = useHistory();
     const [namesText, setNameText] = useState('');
     const [valueNumber, setValueNumber] = useState('1');
-    const [newNameFilter, setewNameFilter] = useState('');
+    const [newNameFilter, setNameFilter] = useState<string[]>([]);
 
     function handleBack(){
         history.push('/')
@@ -29,8 +30,9 @@ export function Nomes() {
         for (let i = 0; i < numberNames; i++) {
             const element = namesFormatted[i];
             newNameFilterAr.push(element)
-            // setewNameFilter(element)
         }
+        
+        setNameFilter(newNameFilterAr);
         console.log(newNameFilterAr)
     }
 
@@ -55,11 +57,9 @@ export function Nomes() {
                         <button onClick={handleBack}>Voltar</button>
                     </div>
 
-                    {/* <p>
-                        {
-                            numbers.map(el => <option value={el} key={el}> {el} </option>)
-                        }
-                    </p> */}
+                    {/* {
+                        newNameFilterAr.map()
+                    } */}
                 </form>
             </div>
         </div>

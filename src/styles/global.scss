@@ -109,3 +109,13 @@ body, input, button, textarea{
         }
     }
 }
+
+.quantityError{
+    background: #f8050197;
+    color: #fff !important;
+    font: 600 16px 'Roboto', sans-serif;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 4px;
+}

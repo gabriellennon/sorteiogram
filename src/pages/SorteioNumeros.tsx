@@ -1,18 +1,30 @@
 import { useEffect, useState } from "react";
 import { withRouter, useLocation } from "react-router-dom";
+import { CardDescription } from "../components/cardDescription";
+import { CardNumber } from "../components/cardNumber";
 
-export function SorteioNumeros(){
-    const [numberSort, setNumberSort] = useState<Number>();
-    const location = useLocation();
+export function SorteioNumeros(props: any){
+    console.log(props.state)
 
-    useEffect(() => {
-        const numberResult = location.state
-        // setNumberSort()
-      }, [location]);
-
+    const listInstructions = [
+        "Informe quantos números você quer no resultado do sorteio. Exemplo: 3",
+        "Preencha qual o intervalo deve ser sorteado. Exemplo: entre 1 e 100",
+        "Clique em sortear números. Pronto!"
+    ]
     return(
         <>
-            <h1>Sorteio numeros</h1>
+            <div className="content">
+                <CardNumber />
+
+                {
+                    props.location.state.detail.map((e: number) => <p>{e}</p>)
+                }
+
+                <CardDescription 
+                    title="Como fazer um sorteio de números"
+                    descriptionList={listInstructions}
+                />
+            </div>
         </>
     )
 }
