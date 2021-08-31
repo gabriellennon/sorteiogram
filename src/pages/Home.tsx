@@ -4,7 +4,6 @@ import toast from 'react-hot-toast';
 import { useHistory } from 'react-router-dom';
 
 import { CardSorteio } from '../components/cardSorteio';
-import '../styles/header.scss';
 
 export function Home() {
     const [sortnumber, setSortNumber] = useState('1');
