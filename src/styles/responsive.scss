@@ -1,0 +1,13 @@
+
+@media screen and (max-width: 767px) {
+    .boxCard{
+        width: auto;
+    }
+
+    .section-buttons{
+        flex-direction: column;
+        button{
+            margin: 6px 0;
+        }
+    }
+}
