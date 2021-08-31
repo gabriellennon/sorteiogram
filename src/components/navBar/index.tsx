@@ -20,7 +20,7 @@ export function NavBar() {
                 <nav className={menu ? "open" : ''}>
                     <ul>
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/sorteio/numeros">Sorteio de números</Link></li>
+                        <li><Link to="/">Sorteio de números</Link></li>
                         <li><Link to="/sorteio/nomes">Sorteio de nomes</Link></li>
                     </ul>
                 </nav>
